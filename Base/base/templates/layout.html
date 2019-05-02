@@ -1,0 +1,27 @@
+<html>
+<head>
+	 <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='main.css') }}">
+
+    {% if title %}
+    	<title>UI - {{ title }}</title>
+    {% else %}
+    	<title>UI</title>
+    {% endif %}
+</head>
+<body>
+	  <sector class="sector sector sector-dark bg-steel fixed-middle">
+	    <div class="container">
+            <a style="margin-left:44%;margin-right:58%;display:block;margin-top:20%;margin-bottom:1%"
+	    	    href = "register.html"><button type="button">LOGIN</button></a> 
+            <a style="margin-left:43%;margin-right:57%;display:block;margin-top:0%;margin-bottom:1%" 
+                href = "register.html"><button type="button">REGISTER</button></a>   	
+	    </div>
+	  </sector>
+</body>
+</html>

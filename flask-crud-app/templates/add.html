@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Book Manager</title>
+	<meta charset="utf-8" />
+</head>
+<body>
+
+
+	<form method="post" action="/get_user">
+		<label>Title of the book:</label>
+		<input id="title" type="text" name="title">
+		<label>Number of Pages:</label>
+		<input id="no_of_pages" type="number" name="no_of_pages">
+		<label>Date Published:</label>
+		<input id="date_published" type="number" name="date_published">
+		<br>
+		<br>
+		<label>Rating:</label>
+		<input id="rating" type="number" name="rating">
+		<br>
+		<br>
+		<br>
+		<label>First Name:</label>
+		<input id="first_name" type="text" name="first_name">
+		<label>Last Name:</label>
+		<input id="last_name" type="text" name="last_name">
+		<input type="submit">
+	</form>
+	<br>
+	{% for author in myAuthor %}
+
+		<li>Author ID {{ author.id }}: Author's Full Name: {{ author.first_name }},  {{ author.last_name }}</li>
+
+	{% endfor %}
+	<br>
+	{% for book in myBook %}
+		<li>Auhor ID: {{ book.id }}. Book Title: {{book.title }},  Number of Pages: {{ book.no_of_pages}}</li>
+		<br>
+		<li>Date Published: {{ book.date_published}},  Rating: {{ book.rating }}</li>
+	{% endfor %}	
+</body>
+</html>
